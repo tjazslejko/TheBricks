@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>The Bricks - Tjaž Slejko</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+	<script src="js/jquery-3.5.1.min.js"></script>
+
+</head>
+<body onload="zacetek()" onload="navodila()">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<div id="glavni">
+	<canvas id="okvir" width="900" height="900">
+
+	</canvas>
+	<script src="js/script.js"></script>
+	<div id="naslov">
+		<h1>The Bricks<h1>
+	</div>
+	
+	<div id="tocke_cas">
+			<div id="points">
+				<p>TOCKE:<mark id="tocke">0</mark></p>
+				<p>CAS: <mark id="cas">00:00</mark></p>
+			</div>
+	</div>
+	
+	<div id="tockovnik">
+		<table>
+			<tr>
+				<td>
+				<p class="naslov">Legenda</p>
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<td><img class="slike1" src="slike/ogenj.png"/>
+					<h class="tocke">
+						= 1 tocka
+					</p></td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<td><img class="slike2" src="slike/ogenj2.jpg"/>
+					<h id="ena"class="tocke">
+						= 2 tocki
+					</p></td>
+				</td>
+			</tr>
+						<tr>
+				<td>
+				<td><img class="slike3" src="slike/ogenj3.png"/>
+					<h id="dva"class="tocke">
+						= 3 tocke
+					</p></td>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+	
+<script>
+function zacetek(){
+	var canvas = document.getElementById("okvir");
+	var ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(460, 800, 10, 0, Math.PI*2, true);
+	ctx.fillStyle='blue';
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fill();
+	rect(paddlex, HEIGHT-paddleh, paddlew, paddleh);
+	
+}
+swal({title: 'Navodila',
+text:'Pritisniti moraš ENTER, da začneš igro. Premikaš se lahko z miško ali z tipkovnico.'});
+</script>
+
+
+</body>
+</html>
